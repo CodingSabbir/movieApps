@@ -35,6 +35,7 @@ const Home = () => {
       </Swiper>
             </div> */}
             <Slider/>
+            <h1>sabbir</h1>
            
         </>
     );
