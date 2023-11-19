@@ -1,6 +1,12 @@
 
 import React, { useRef } from 'react';
 import slider1 from '../Image/slider1.jpg'
+import slider2 from '../Image/slider2 (2).png'
+import slider3 from '../Image/slider3.png'
+import slider4 from '../Image/slider4.jpg'
+import slider5 from '../Image/slider5.png'
+import slider6 from '../Image/slider6.png'
+import slider7 from '../Image/1200-600.png'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,11 +14,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-creative';
 
 import './Slider.css';
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation,EffectCreative } from 'swiper/modules';
 
 const Slider = () => {
     const progressCircle = useRef(null);
@@ -21,9 +28,11 @@ const Slider = () => {
       progressCircle.current.style.setProperty('--progress', 1 - progress);
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     };
+    const image=[slider7,slider2,slider3,slider4,slider5,slider6,slider1]
+    
     return (
         <>
-     <div className='mt-20'>
+     <div className='mt-12'>
      <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -34,17 +43,32 @@ const Slider = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
+        grabCursor={true}
+        effect={'creative'}
+        creativeEffect={{
+          prev: {
+            shadow: true,
+            translate: [0, 0, -400],
+          },
+          next: {
+            translate: ['100%', 0, 0],
+          },
+        }}
+        // navigation={true}
+        modules={[Autoplay, Pagination, Navigation,EffectCreative]}
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
-        <SwiperSlide>
-            <img src={slider1} alt="" />
+       
+        {
+          image.map((img)=>(
+            <SwiperSlide>
+            <img src={img} alt="" />
         </SwiperSlide>
-        <SwiperSlide>
-            <img src={slider1} alt="" />
-        </SwiperSlide>
+          ))
+        }
+       
+      
        
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
