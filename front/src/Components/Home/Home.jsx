@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <>
             <Slider/>
-            <div className="container mx-auto">
-              <h1 className="text-[25px] font-semibold font-mono p-2  md:p-4">Categories</h1>
+            <div >
+              <h1 className="text-[25px] font-semibold font-mono p-2  md:p-4 md:ml-5">Categories</h1>
             </div>
            
              <CategorySlider/>

@@ -96,9 +96,9 @@ return (
 
                     </li>
 
-                    <div className='flex justify-center items-center'>
+                    <div>
                         <li className='pb-2 md:pb-0 relative'>
-                            <input className='border-2 rounded-md px-2 py-1 md:py-0.5 w-full mt-1 md:mt-0 pr-8'
+                            <input className='border-2  rounded-md px-2 py-1 md:py-0.5 w-full mt-1 md:mt-0 pr-8'
                                 type="text" placeholder='Search' />
                             <IoIosSearch
                                 className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500' />

@@ -23,14 +23,13 @@
   .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    
   
-    /* Center slide text vertically */
+  
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
   .swiper-slide img {
     display: block;
     width: 100%;
@@ -38,22 +37,14 @@
     object-fit: cover;
   }
 
-  /* Hide Swiper pagination bullets */
+
 .swiper-pagination-bullet {
     display: none;
 }
 
 @media only screen and (max-width: 768px) {
     .mySwiper {
-      padding: 0 10px; /* Adjust the padding for smaller screens */
+     padding: 0 10px;
     }
   }
 
-
-
-
-
-
-  
-  
-  

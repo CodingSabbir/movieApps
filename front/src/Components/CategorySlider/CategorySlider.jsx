@@ -10,10 +10,12 @@ import './CategorySlider.css'
 
 // import required modules
 import { Pagination,Autoplay, } from 'swiper/modules';
+import { NavLink } from 'react-router-dom';
 
 const CategorySlider = () => {
     return (
-        <div >
+        <NavLink to={'/category'}>
+          <div >
             <Swiper
         slidesPerView={1}
         spaceBetween={0}
@@ -73,6 +75,7 @@ const CategorySlider = () => {
        
       </Swiper>
         </div>
+        </NavLink>
     );
 };
 
