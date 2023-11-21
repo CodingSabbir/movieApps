@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const MoviesCard = () => {
 return (
@@ -9,7 +10,9 @@ return (
             <h2 className="card-title">Shoes!</h2>
             <p>If a dog chews shoes whose shoes does he choose?</p>
             <div className="card-actions justify-end">
+                <NavLink to={'/movies/id'}>
                 <button className="btn btn-primary"> Movie Details</button>
+                </NavLink>
             </div>
         </div>
     </div>
