@@ -8,6 +8,7 @@ import MovieData from "./MovieData/MovieData"
 import Movie from "./Components/Movie/Movie"
 import MoviesCategory from "./Pages/MoviesCategory/MoviesCategory"
 import MovieDetails from "./Pages/MoviesCategory/MovieDetails/MovieDetails"
+import CategoryCard from "./Components/CategoryCard/CategoryCard"
 
 
 

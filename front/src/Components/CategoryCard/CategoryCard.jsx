@@ -1,15 +1,20 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const CategoryCard = () => {
+const CategoryCard = ({categoryItem}) => {
+const {name,_id,CategoryImg}=categoryItem
+   
 return (
+<NavLink to={`/${name}`}>
 <div >
-    <div className="card  md:w-48 bg-base-100 shadow-lg image-full py-3">
-        <figure><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTazMvIaaOJhEmDG36GW_JlxN6bW11GU_ZkkQ&usqp=CAU" alt="Shoes" /></figure>
-        <div className="card-body">
-            <h2 className="card-title hover:no-underline">Action</h2>    
+    <div className="card md:w-48 image-full py-3">
+        <figure><img className=' w-full object-cover'  src={CategoryImg} alt="Shoes" /></figure>
+        <div className="card-body px-3">
+            <h2 className="card-title  hover:no-underline">{name}</h2>    
         </div>
     </div>
 </div>
+</NavLink>
 );
 };
 

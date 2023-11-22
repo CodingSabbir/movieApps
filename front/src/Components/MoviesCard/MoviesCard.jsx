@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const MoviesCard = () => {
+  
 return (
 <div className='mx-3'> 
     <div className="card card-compact  md:w-96 bg-base-100 shadow-xl ">

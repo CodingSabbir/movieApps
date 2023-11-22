@@ -22,7 +22,7 @@ signOut(auth)
 return (
 <div>
 
-    <nav className=" bg-white  border-gray-200  dark:bg-gray-900 shadow-sm">
+    <nav className=" bg-black text-white  border-gray-200  dark:bg-gray-900 shadow-sm">
         <div className="flex flex-wrap items-center justify-between  max-w-screen-xl px-4 mx-auto">
             <NavLink to={'/'}>
                 <a href="#" className="flex items-center">
@@ -78,7 +78,7 @@ return (
 
                         <NavLink to={'/home'}>
                             <a href="#"
-                                className="block py-2 pl-3 pr-4 bg-purple-700 text-white md:text-black  rounded lg:bg-transparent lg:p-0  font-mono font-semibold text-[17px]"
+                                className="block py-2 pl-3 pr-4 bg-purple-700 text-white md:text-white  rounded lg:bg-transparent lg:p-0  font-mono font-semibold text-[17px]"
                                 aria-current="page">
                                 Home
                             </a>

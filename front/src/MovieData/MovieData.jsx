@@ -12,7 +12,7 @@ const MovieData = () => {
  useEffect(()=>{
     movieDataShow()
  },[])
- console.log(category)
+//  console.log(category)
     return (
         <div>
            
