@@ -22,7 +22,7 @@ signOut(auth)
 return (
 <div>
 
-    <nav className=" bg-black text-white  border-gray-200  dark:bg-gray-900 shadow-sm">
+    <nav className=" bg-slate-200 text-black  border-gray-200  dark:bg-gray-900 shadow-sm">
         <div className="flex flex-wrap items-center justify-between  max-w-screen-xl px-4 mx-auto">
             <NavLink to={'/'}>
                 <a href="#" className="flex items-center">
@@ -78,7 +78,7 @@ return (
 
                         <NavLink to={'/home'}>
                             <a href="#"
-                                className="block py-2 pl-3 pr-4 bg-purple-700 text-white md:text-white  rounded lg:bg-transparent lg:p-0  font-mono font-semibold text-[17px]"
+                                className="block py-2 pl-3 pr-4 bg-purple-700 text-white md:text-black  rounded lg:bg-transparent lg:p-0  font-mono font-semibold text-[17px]"
                                 aria-current="page">
                                 Home
                             </a>
@@ -98,10 +98,12 @@ return (
 
                     <div>
                         <li className='pb-2 md:pb-0 relative'>
-                            <input className='border-2  rounded-md px-2 py-1 md:py-0.5 w-full mt-1 md:mt-0 pr-8'
+                            <input className='border-2 text-black rounded-md px-2 py-1 md:py-0.5 w-full mt-1 md:mt-0 pr-8'
                                 type="text" placeholder='Search' />
-                            <IoIosSearch
-                                className='absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-500' />
+                           <button>
+                           <IoIosSearch
+                                className='absolute right-2 top-1/2 transform -translate-y-1/2 text-black' />
+                           </button>
                         </li>
                     </div>
 

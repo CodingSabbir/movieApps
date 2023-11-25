@@ -26,9 +26,9 @@ const Facebook = () => {
       }
     return (
         <div className='mt-10'>
-            <div className=' border-2 p-1 rounded-md text-center flex justify-center items-center gap-10 border-black'>
-            <div><ImFacebook2/></div>
-            <button onClick={()=>signInWithFacebook()} type='submit'> Continue With Facebook  </button>
+            <div className=' border-2  p-1 rounded-md text-center flex justify-center items-center gap-10 border-white'>
+            <div className='text-white'><ImFacebook2/></div>
+            <button className='text-white' onClick={()=>signInWithFacebook()} type='submit'> Continue With Facebook  </button>
             </div>
         </div>
     );

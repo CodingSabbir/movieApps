@@ -47,13 +47,13 @@ const SignUp = () => {
   };
 
   return (
-    <div className="bg-gray-100 flex justify-center items-center mt-12 md:h-screen md:mt-12">
+    <div className="bg-black flex justify-center items-center mt-12 md:h-screen md:mt-12">
       <div className="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
-        <h1 className="text-2xl font-semibold mb-4">Sign Up</h1>
-        <form>
-      
-          <div className="mb-4">
-            <label htmlFor="username" className="block text-gray-600">
+        <h1 className="text-2xl font-semibold mb-4 text-white">Sign Up</h1>
+        <form className='border-2 p-3 rounded-md'>
+  
+          <div className="mb-4 ">
+            <label htmlFor="username" className="block text-white">
               UserName
              </label>
               <input
@@ -68,7 +68,7 @@ const SignUp = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-600">
+            <label htmlFor="email" className="block text-white">
               Email
             </label>
             <input
@@ -84,7 +84,7 @@ const SignUp = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-600">
+            <label htmlFor="password" className="block text-white">
               Password
             </label>
             <input
@@ -98,7 +98,7 @@ const SignUp = () => {
             />
           </div>
 
-          <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+          <label htmlFor="message" className="block mb-2 text-sm font-medium text-white dark:text-gray-400">
             Your message
           </label>
           <textarea

@@ -54,9 +54,9 @@ const Login = () => {
   };
 
   return (
-    <div className="  min-h-screen flex flex-col items-center justify-center mx-3 md:mx-0 py-4 md:py-0">
-      <div className="mt-20 border-2 flex flex-col bg-white shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
-        <div className="font-medium self-center text-xl sm:text-2xl uppercase text-gray-800">
+    <div className=" bg-black min-h-screen flex flex-col items-center justify-center px-3 md:mx-0 py-4 md:py-0">
+      <div className="mt-20 border-2 flex flex-col  shadow-md px-4 sm:px-6 md:px-8 lg:px-10 py-8 rounded-md w-full max-w-md">
+        <div className="font-medium self-center text-xl sm:text-2xl uppercase text-white">
           Login To Your Account
         </div>
 
@@ -66,7 +66,7 @@ const Login = () => {
        
         <div className="relative mt-10 h-px bg-gray-300">
           <div className="absolute left-0 top-0 flex justify-center w-full -mt-2">
-            <span className="bg-white px-4 text-xs text-gray-500 uppercase">
+            <span className=" px-4 bg-white text-xs text-black uppercase rounded-full">
               Or Login With Email
             </span>
           </div>
@@ -76,7 +76,7 @@ const Login = () => {
             <div className="flex flex-col mb-6">
               <label
                 htmlFor="email"
-                className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+                className="mb-1 text-xs sm:text-sm tracking-wide text-white"
               >
                 E-Mail Address:
               </label>
@@ -108,7 +108,7 @@ const Login = () => {
             <div className="flex flex-col mb-6">
               <label
                 htmlFor="password"
-                className="mb-1 text-xs sm:text-sm tracking-wide text-gray-600"
+                className="mb-1 text-xs sm:text-sm tracking-wide text-white"
               >
                 Password:
               </label>
