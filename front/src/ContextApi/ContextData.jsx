@@ -15,20 +15,35 @@ return setAllCategory(response)
 }
 
 const movieData = async () => {
-      const movies = await MovieClient.fetch(`*[_type == 'movies']{name,_id,trailerURL,releaseDate,"MovieImg": poster.asset->url}`);
+      const movies = await MovieClient.fetch(`*[_type == 'movies']{name,_id,trailerURL,cast,releaseDate,"MovieImg": poster.asset->url}`);
    return  setAllMovie(movies);
     
   };
 
+const searchHandeler=(e)=>{
+  const userSearchData= e.target.value
+  searchMovieFatch(userSearchData)
+}
+
+const searchMovieFatch= async(resive)=>{
+if(!resive){
+  movieData()
+}else{
+  const userSearch= await MovieClient.fetch(`*[_type == 'movies' && ( name match '${resive} *')]{name,_id,trailerURL,releaseDate,"MovieImg": poster.asset->url}`)
+  return setAllMovie(userSearch)
+}
+}
+
 useEffect(()=>{
 movieData()
 categoryData()
+searchMovieFatch()
 },[])
 console.log(allMovie)
 
 
 
-return <movieContext.Provider value={{ allCategory,allMovie }}>
+return <movieContext.Provider value={{ allCategory,allMovie,searchHandeler }}>
     {children}
 </movieContext.Provider>
 }

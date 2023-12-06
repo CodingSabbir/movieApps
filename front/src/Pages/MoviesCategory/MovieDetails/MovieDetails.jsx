@@ -11,10 +11,11 @@ const MovieDetails = () => {
 
    const {id}=useParams()
    const [allMovieDetaild,setAllMovieDetaild] = useState([])
+   console.log(allMovieDetaild)
    const [loding,setLoding]=useState(false)
   const moviesDetails=async()=>{
     setLoding(true)
-    const moviesDetails= await MovieClient. fetch(`*[_type == 'movies' && _id == "${id}"]{name,_id,trailerURL,releaseDate,"MovieImg": poster.asset->url}`)
+    const moviesDetails= await MovieClient. fetch(`*[_type == 'movies' && _id == "${id}"]{name,_id,trailerURL,cast,releaseDate,"MovieImg": poster.asset->url}`)
     setLoding(false)
     setAllMovieDetaild(moviesDetails)
   }
@@ -42,10 +43,17 @@ return (
     <figure><img className='h-full md:w-[500px] ' src={movie.MovieImg} alt="Movie"/></figure>
     <div className="card-body">
       <h2 className="card-title text-black uppercase line-clamp-1">{movie.name}</h2>
-      <p className='text-black'>Click the button to watch on Jetflix app.</p>
+      <p className='text-black'>Release Date:{movie.releaseDate}</p>
       <div className="card-actions justify-end text-black">
-        <button className="btn btn-primary ">Watch</button>
+        <p>Movie Link:{movie.trailerURL}</p>
       </div>
+      <ul>
+        {
+          movie.cast.map((c)=>(
+            <li className='text-black'> Movie cast-{c}</li>
+          ))
+        }
+      </ul>
     </div>
   </div>
       

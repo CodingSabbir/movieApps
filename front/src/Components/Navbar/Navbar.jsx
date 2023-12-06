@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../Firebase/FirebaseAuth';
 import { signOut } from 'firebase/auth';
 import logo from '../Image/logo (10).png'
-import { IoIosSearch } from "react-icons/io";
+import { useData } from '../../ContextApi/ContextData';
 
 const Navbar = () => {
 const [isMobileMenuOpen, setMobileMenuOpen] =useState(false);
@@ -18,6 +18,7 @@ console.log(user)
 const handleSignOut=()=>{
 signOut(auth)
 }
+
 
 return (
 <div>
@@ -96,16 +97,7 @@ return (
 
                     </li>
 
-                    <div>
-                        <li className='pb-2 md:pb-0 relative'>
-                            <input className='border-2 text-black rounded-md px-2 py-1 md:py-0.5 w-full mt-1 md:mt-0 pr-8'
-                                type="text" placeholder='Search' />
-                           <button>
-                           <IoIosSearch
-                                className='absolute right-2 top-1/2 transform -translate-y-1/2 text-black' />
-                           </button>
-                        </li>
-                    </div>
+                   
 
                 </ul>
             </div>
